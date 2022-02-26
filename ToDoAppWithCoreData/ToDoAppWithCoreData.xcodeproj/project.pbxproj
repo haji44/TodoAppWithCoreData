@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2083156F27CA745B00300534 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083156E27CA745B00300534 /* Date+Ext.swift */; };
 		208B064627C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208B064527C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift */; };
 		208B064827C21D5B00E5B347 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208B064727C21D5B00E5B347 /* ContentView.swift */; };
 		208B064A27C21D5C00E5B347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208B064927C21D5C00E5B347 /* Assets.xcassets */; };
@@ -18,9 +19,13 @@
 		208B066927C2234200E5B347 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208B066327C2234200E5B347 /* ItemCell.swift */; };
 		208B066A27C2234200E5B347 /* ItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208B066527C2234200E5B347 /* ItemButton.swift */; };
 		208B067127C22A2D00E5B347 /* AddToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208B067027C22A2D00E5B347 /* AddToDoView.swift */; };
+		20FB72B227CA6F93000A60FA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB72B127CA6F93000A60FA /* FormView.swift */; };
+		20FB72B527CA70DD000A60FA /* ItemEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB72B327CA70DD000A60FA /* ItemEntity+CoreDataClass.swift */; };
+		20FB72B627CA70DD000A60FA /* ItemEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB72B427CA70DD000A60FA /* ItemEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2083156E27CA745B00300534 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		208B064227C21D5B00E5B347 /* ToDoAppWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208B064527C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppWithCoreDataApp.swift; sourceTree = "<group>"; };
 		208B064727C21D5B00E5B347 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +40,9 @@
 		208B066527C2234200E5B347 /* ItemButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemButton.swift; sourceTree = "<group>"; };
 		208B067027C22A2D00E5B347 /* AddToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoView.swift; sourceTree = "<group>"; };
 		208B069327C2720F00E5B347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		20FB72B127CA6F93000A60FA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		20FB72B327CA70DD000A60FA /* ItemEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20FB72B427CA70DD000A60FA /* ItemEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2083156C27CA744800300534 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2083156D27CA744D00300534 /* Extension */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2083156D27CA744D00300534 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2083156E27CA745B00300534 /* Date+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		208B063927C21D5B00E5B347 = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +93,17 @@
 		208B064427C21D5B00E5B347 /* ToDoAppWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				208B069327C2720F00E5B347 /* Info.plist */,
-				208B065C27C221C500E5B347 /* Views */,
-				208B065827C21F9000E5B347 /* ToDoAppWithCoreData.entitlements */,
-				208B064527C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift */,
+				2083156C27CA744800300534 /* Utility */,
 				208B064927C21D5C00E5B347 /* Assets.xcassets */,
+				208B069327C2720F00E5B347 /* Info.plist */,
+				20FB72B327CA70DD000A60FA /* ItemEntity+CoreDataClass.swift */,
+				20FB72B427CA70DD000A60FA /* ItemEntity+CoreDataProperties.swift */,
 				208B064E27C21D5C00E5B347 /* Persistence.swift */,
-				208B065027C21D5C00E5B347 /* ToDoAppWithCoreData.xcdatamodeld */,
+				208B065C27C221C500E5B347 /* Views */,
 				208B064B27C21D5C00E5B347 /* Preview Content */,
+				208B065827C21F9000E5B347 /* ToDoAppWithCoreData.entitlements */,
+				208B065027C21D5C00E5B347 /* ToDoAppWithCoreData.xcdatamodeld */,
+				208B064527C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift */,
 			);
 			path = ToDoAppWithCoreData;
 			sourceTree = "<group>";
@@ -100,6 +127,7 @@
 		208B065C27C221C500E5B347 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20FB72B027CA6F88000A60FA /* Form */,
 				208B065D27C221C900E5B347 /* Screens */,
 				208B066427C2234200E5B347 /* Button */,
 				208B066227C2234200E5B347 /* Cell */,
@@ -131,6 +159,14 @@
 				208B066527C2234200E5B347 /* ItemButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		20FB72B027CA6F88000A60FA /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				20FB72B127CA6F93000A60FA /* FormView.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +242,13 @@
 				208B065F27C2223B00E5B347 /* ItemDetailView.swift in Sources */,
 				208B065227C21D5C00E5B347 /* ToDoAppWithCoreData.xcdatamodeld in Sources */,
 				208B064F27C21D5C00E5B347 /* Persistence.swift in Sources */,
+				2083156F27CA745B00300534 /* Date+Ext.swift in Sources */,
 				208B066927C2234200E5B347 /* ItemCell.swift in Sources */,
 				208B064827C21D5B00E5B347 /* ContentView.swift in Sources */,
+				20FB72B527CA70DD000A60FA /* ItemEntity+CoreDataClass.swift in Sources */,
+				20FB72B627CA70DD000A60FA /* ItemEntity+CoreDataProperties.swift in Sources */,
 				208B066A27C2234200E5B347 /* ItemButton.swift in Sources */,
+				20FB72B227CA6F93000A60FA /* FormView.swift in Sources */,
 				208B067127C22A2D00E5B347 /* AddToDoView.swift in Sources */,
 				208B064627C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift in Sources */,
 			);
