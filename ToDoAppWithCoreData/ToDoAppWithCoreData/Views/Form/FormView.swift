@@ -14,11 +14,13 @@ struct FormView: View {
     
     @State private var name: String = ""
     @State private var detail: String = ""
-    @State private var date = Date.now
+    @State var date = Date.now
+    @State private var dueDate: String = ""
+
     
     // this enum case represents field of view
     enum FromTextField {
-    case title, detail
+        case title, detail
     }
     
     var body: some View {
@@ -33,32 +35,27 @@ struct FormView: View {
                     .background(Color(UIColor.tertiarySystemFill))
                     .cornerRadius(9)
                     .font(.system(size: 24, weight: .bold, design: .default))
-                
+
                 TextField("How to resolve?", text: $detail)
                     .focused($focusedTextField, equals: .detail)
                     .onSubmit { focusedTextField = nil } // dismiss keybord
                     .keyboardType(.asciiCapable)
                     .disableAutocorrection(true)
-                    .frame(height: 300)
+                    .frame(height: 150)
                     .padding()
                     .background(Color(UIColor.tertiarySystemFill))
                     .cornerRadius(9)
                     .font(.system(size: 24, weight: .bold, design: .default))
-                
-                HStack {
-                    DatePicker("Due", selection: $date)
-                        .datePickerStyle(GraphicalDatePickerStyle())
-                        .frame(maxHeight: 400)
-                    
-                    
-                    //                    DatePicker("",
-                    //                               selection: $date,
-                    //                               in: Date().hundreadYearsAgo...Date().eighteenYearsAgo,
-                    //                               displayedComponents: .date)
+            }//: SECTION TASK
+            
+            Section(header: Text("Due")) {
+                DatePicker(selection: $date) {
+                    Text("Due")
                 }
-                
-            }//: SECTION
-            .font(.largeTitle)
+                .datePickerStyle(CompactDatePickerStyle())
+                .labelsHidden()
+
+            }
         }//: FORM
     }//: BODY
 }

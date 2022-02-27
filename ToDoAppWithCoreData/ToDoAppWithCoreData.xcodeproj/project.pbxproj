@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2083156F27CA745B00300534 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083156E27CA745B00300534 /* Date+Ext.swift */; };
+		2083157127CA7D9900300534 /* CollapsibleCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083157027CA7D9900300534 /* CollapsibleCalendar.swift */; };
 		208B064627C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208B064527C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift */; };
 		208B064827C21D5B00E5B347 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208B064727C21D5B00E5B347 /* ContentView.swift */; };
 		208B064A27C21D5C00E5B347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208B064927C21D5C00E5B347 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		2083156E27CA745B00300534 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		2083157027CA7D9900300534 /* CollapsibleCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleCalendar.swift; sourceTree = "<group>"; };
 		208B064227C21D5B00E5B347 /* ToDoAppWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208B064527C21D5B00E5B347 /* ToDoAppWithCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppWithCoreDataApp.swift; sourceTree = "<group>"; };
 		208B064727C21D5B00E5B347 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				20FB72B127CA6F93000A60FA /* FormView.swift */,
+				2083157027CA7D9900300534 /* CollapsibleCalendar.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				208B065F27C2223B00E5B347 /* ItemDetailView.swift in Sources */,
 				208B065227C21D5C00E5B347 /* ToDoAppWithCoreData.xcdatamodeld in Sources */,
 				208B064F27C21D5C00E5B347 /* Persistence.swift in Sources */,
+				2083157127CA7D9900300534 /* CollapsibleCalendar.swift in Sources */,
 				2083156F27CA745B00300534 /* Date+Ext.swift in Sources */,
 				208B066927C2234200E5B347 /* ItemCell.swift in Sources */,
 				208B064827C21D5B00E5B347 /* ContentView.swift in Sources */,

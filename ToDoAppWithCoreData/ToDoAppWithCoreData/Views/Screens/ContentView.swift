@@ -15,7 +15,7 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \ItemEntity.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<ItemEntity>
-    
+    @State private var query = ""
     @State private var isShowingModal: Bool = false
     
     var body: some View {
@@ -23,11 +23,11 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     List {
-                        ForEach(self.items,id: \.self) { item in
+                        ForEach(self.items, id: \.self) { item in
                             NavigationLink {
-                                ItemDetailView(title: item.title ?? "", description: item.detail ?? "" )
+                                ItemDetailView(title: item.title , description: item.detail )
                             } label: {
-                                ItemCell(title: item.title ?? "", description: item.detail ?? "")
+                                ItemCell(title: item.title , description: item.detail )
                             }
                         }
                         .onDelete(perform: deleteItems)
@@ -37,6 +37,9 @@ struct ContentView: View {
                 }//: VSTACK
                 .navigationTitle("TODO LIST")
             }//: NAVIGATION
+            .searchable(text: $query)
+
+
         }//: ZSTACK
         .sheet(isPresented: $isShowingModal) {
             AddToDoView()

@@ -17,20 +17,13 @@ struct AddToDoView: View {
 
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 70) {
-                TextField("What's your task?", text: $name)
-                  .padding()
-                  .background(Color(UIColor.tertiarySystemFill))
-                  .cornerRadius(9)
-                  .font(.system(size: 24, weight: .bold, design: .default))
+        
+            VStack {
+
+                FormView()
+                          
+                Spacer()
                 
-                TextField("How to resolve?", text: $detail)
-                    .frame(height: 300)
-                  .padding()
-                  .background(Color(UIColor.tertiarySystemFill))
-                  .cornerRadius(9)
-                  .font(.system(size: 24, weight: .bold, design: .default))
                 Button {
                     addItem()
                     self.presentationMode.wrappedValue.dismiss()
@@ -38,14 +31,9 @@ struct AddToDoView: View {
                     ItemButton(color: .blue, title: "Save")
                 }
             }//: VSTACK
-            .navigationBarItems(trailing:
-              Button{
-                self.presentationMode.wrappedValue.dismiss()
-            }label: {
-                Image(systemName: "xmark")
-            })
-        }
-    }
+            
+        
+    }//: VIEW
     
     
     // MARK: FUNCTION
@@ -65,6 +53,13 @@ struct AddToDoView: View {
             }
         }
     }
+    
+    private func checkInputValue() {
+        if name.isEmpty || detail.isEmpty {
+            
+        }
+    }
+    
     
 //    private func saveItemCloudKit(record: CKRecord) {
 //        CKContainer.default().publicCloudDatabase.save(record) { record, error in
