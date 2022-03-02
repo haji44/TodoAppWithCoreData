@@ -13,7 +13,7 @@ struct TestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ListView()
+            AlertShowingView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
