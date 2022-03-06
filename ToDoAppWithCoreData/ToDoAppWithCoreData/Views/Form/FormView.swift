@@ -16,7 +16,6 @@ struct FormView: View {
     @State private var detail: String = ""
     @State var date = Date.now
     @State private var dueDate: String = ""
-
     
     // this enum case represents field of view
     enum FromTextField {
@@ -24,7 +23,6 @@ struct FormView: View {
     }
     
     var body: some View {
-        
         Form {
             Section(header: Text("New Task")) {
                 TextField("What's your task?", text: $name)
@@ -54,7 +52,6 @@ struct FormView: View {
                 }
                 .datePickerStyle(CompactDatePickerStyle())
                 .labelsHidden()
-
             }
         }//: FORM
     }//: BODY
