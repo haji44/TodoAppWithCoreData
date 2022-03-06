@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CloudKit
 
 struct AddToDoView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -16,20 +17,13 @@ struct AddToDoView: View {
 
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 70) {
-                TextField("What's your task?", text: $name)
-                  .padding()
-                  .background(Color(UIColor.tertiarySystemFill))
-                  .cornerRadius(9)
-                  .font(.system(size: 24, weight: .bold, design: .default))
+        
+            VStack {
+
+                FormView()
+                          
+                Spacer()
                 
-                TextField("How to resolve?", text: $detail)
-                    .frame(height: 300)
-                  .padding()
-                  .background(Color(UIColor.tertiarySystemFill))
-                  .cornerRadius(9)
-                  .font(.system(size: 24, weight: .bold, design: .default))
                 Button {
                     addItem()
                     self.presentationMode.wrappedValue.dismiss()
@@ -37,20 +31,15 @@ struct AddToDoView: View {
                     ItemButton(color: .blue, title: "Save")
                 }
             }//: VSTACK
-            .navigationBarItems(trailing:
-              Button{
-                self.presentationMode.wrappedValue.dismiss()
-            }label: {
-                Image(systemName: "xmark")
-            })
-        }
-    }
+            
+        
+    }//: VIEW
     
     
     // MARK: FUNCTION
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
+            let newItem = ItemEntity(context: viewContext)
             newItem.timestamp = Date()
             newItem.title = name
             newItem.detail = detail
@@ -59,12 +48,24 @@ struct AddToDoView: View {
                 try viewContext.save()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
     }
+    
+    private func checkInputValue() {
+        if name.isEmpty || detail.isEmpty {
+            
+        }
+    }
+    
+    
+//    private func saveItemCloudKit(record: CKRecord) {
+//        CKContainer.default().publicCloudDatabase.save(record) { record, error in
+//            print(record)
+//        }
+//    }
 }
 
 struct AddToDoView_Previews: PreviewProvider {

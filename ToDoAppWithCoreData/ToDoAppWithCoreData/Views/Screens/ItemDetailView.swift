@@ -15,6 +15,7 @@ struct ItemDetailView: View {
     var body: some View {
         VStack {
             Text("Title: \(title)")
+            Text("Description: \(description)")
         }
     }
 }
