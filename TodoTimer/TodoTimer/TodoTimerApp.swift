@@ -13,6 +13,7 @@ struct TodoTimerApp: App {
 
     var body: some Scene {
         WindowGroup {
+//            TimerView(referenceDate: Date(timeIntervalSinceNow: 86400))
             TodoListView()
                 .environment(\.managedObjectContext, persistenceController.viewContext)
         }

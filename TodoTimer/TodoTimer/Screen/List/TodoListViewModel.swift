@@ -16,7 +16,7 @@ class TodoListViewModel: ObservableObject {
     }
     
     func fetch() {
-        items = ItemEntity.fetch(context: PersistenceController.shared.viewContext)
+        items = ItemEntity.fetch()
     }
     
     func remove(at offsets: IndexSet) {
@@ -29,6 +29,11 @@ class TodoListViewModel: ObservableObject {
     
     func add(title: String, detail: String, due: Date) {
         ItemEntity.add(title: title, detail: detail, due: due)
+        fetch()
+    }
+
+    func update(item: ItemEntity) {
+        ItemEntity.update(item: item)
         fetch()
     }
 }

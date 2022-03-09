@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		200F0DED27D265DB00F30119 /* CreateTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F0DEC27D265DB00F30119 /* CreateTodoView.swift */; };
+		20227D1A27D7932A003B924D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20227D1927D7932A003B924D /* TimerView.swift */; };
+		20227D1D27D7A279003B924D /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20227D1C27D7A279003B924D /* Date+Ext.swift */; };
 		20620DA327D2589A0025D112 /* TodoTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20620DA227D2589A0025D112 /* TodoTimerApp.swift */; };
 		20620DA527D2589A0025D112 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20620DA427D2589A0025D112 /* TodoListView.swift */; };
 		20620DA727D2589B0025D112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20620DA627D2589B0025D112 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		200F0DEB27D2607F00F30119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		200F0DEC27D265DB00F30119 /* CreateTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTodoView.swift; sourceTree = "<group>"; };
+		20227D1927D7932A003B924D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		20227D1C27D7A279003B924D /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		20620D9F27D2589A0025D112 /* TodoTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20620DA227D2589A0025D112 /* TodoTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTimerApp.swift; sourceTree = "<group>"; };
 		20620DA427D2589A0025D112 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
@@ -49,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20227D1B27D7A26D003B924D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				20227D1C27D7A279003B924D /* Date+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		20227D1E27D7A289003B924D /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				20227D1927D7932A003B924D /* TimerView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		20620D9627D2589A0025D112 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +89,7 @@
 		20620DA127D2589A0025D112 /* TodoTimer */ = {
 			isa = PBXGroup;
 			children = (
+				20227D1B27D7A26D003B924D /* Extension */,
 				200F0DEB27D2607F00F30119 /* Info.plist */,
 				20620DBE27D25EC80025D112 /* TodoTimer.entitlements */,
 				20620DA227D2589A0025D112 /* TodoTimerApp.swift */,
@@ -91,8 +112,9 @@
 		20620DB527D25BA70025D112 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				20227D1E27D7A289003B924D /* Timer */,
+				20A9C25127D4AEC3007A94AA /* NewTask */,
 				20620DB727D25C020025D112 /* List */,
-				200F0DEC27D265DB00F30119 /* CreateTodoView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -123,6 +145,14 @@
 				20620DC027D25ECB0025D112 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20A9C25127D4AEC3007A94AA /* NewTask */ = {
+			isa = PBXGroup;
+			children = (
+				200F0DEC27D265DB00F30119 /* CreateTodoView.swift */,
+			);
+			path = NewTask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20227D1A27D7932A003B924D /* TimerView.swift in Sources */,
 				20620DAC27D2589B0025D112 /* Persistence.swift in Sources */,
 				20A9C24D27D4846C007A94AA /* ItemEntity+CoreDataClass.swift in Sources */,
 				20620DB927D25C140025D112 /* TodoListViewModel.swift in Sources */,
@@ -203,6 +234,7 @@
 				20A9C24E27D4846C007A94AA /* ItemEntity+CoreDataProperties.swift in Sources */,
 				20620DA527D2589A0025D112 /* TodoListView.swift in Sources */,
 				20620DA327D2589A0025D112 /* TodoTimerApp.swift in Sources */,
+				20227D1D27D7A279003B924D /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

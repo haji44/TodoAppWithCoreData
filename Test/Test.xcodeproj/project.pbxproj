@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20227D2227D7AD23003B924D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20227D2127D7AD23003B924D /* CircleView.swift */; };
+		20227D2427D7B82C003B924D /* SwiftUIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20227D2327D7B82C003B924D /* SwiftUIMapView.swift */; };
 		20B6831F27CB3E6C004B1581 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6831E27CB3E6C004B1581 /* TestApp.swift */; };
 		20B6832127CB3E6C004B1581 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6832027CB3E6C004B1581 /* ContentView.swift */; };
 		20B6832327CB3E6D004B1581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B6832227CB3E6D004B1581 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20227D2127D7AD23003B924D /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		20227D2327D7B82C003B924D /* SwiftUIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapView.swift; sourceTree = "<group>"; };
 		20B6831B27CB3E6C004B1581 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B6831E27CB3E6C004B1581 /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
 		20B6832027CB3E6C004B1581 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				20B6833827CB484A004B1581 /* CutomAlertView.swift */,
 				20B6833A27CB48BD004B1581 /* AlertShowingView.swift */,
 				20B6833F27CB4E4C004B1581 /* Alert.swift */,
+				20227D2127D7AD23003B924D /* CircleView.swift */,
+				20227D2327D7B82C003B924D /* SwiftUIMapView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -163,7 +169,9 @@
 				20B6832B27CB3E6D004B1581 /* Test.xcdatamodeld in Sources */,
 				20B6833427CB3EA2004B1581 /* ListView.swift in Sources */,
 				20B6833B27CB48BD004B1581 /* AlertShowingView.swift in Sources */,
+				20227D2427D7B82C003B924D /* SwiftUIMapView.swift in Sources */,
 				20B6832127CB3E6C004B1581 /* ContentView.swift in Sources */,
+				20227D2227D7AD23003B924D /* CircleView.swift in Sources */,
 				20B6833927CB484A004B1581 /* CutomAlertView.swift in Sources */,
 				20B6833227CB3E80004B1581 /* Collapsed.swift in Sources */,
 				20B6831F27CB3E6C004B1581 /* TestApp.swift in Sources */,
