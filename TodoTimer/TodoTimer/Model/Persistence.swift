@@ -27,14 +27,4 @@ struct PersistenceController {
             }
         })
     }
-    
-    func save() {
-        do {
-            try viewContext.save()
-        } catch {
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        }
-    }
 }

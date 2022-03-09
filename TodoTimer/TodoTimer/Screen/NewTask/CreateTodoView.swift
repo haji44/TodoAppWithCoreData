@@ -9,12 +9,15 @@ import SwiftUI
 
 struct CreateTodoView: View {
 
-    @EnvironmentObject var viewModel: TodoListViewModel
-    @State var title: String = ""
-    @State var detail: String = ""
-    @State var date: Date = Date()
+    @EnvironmentObject var todoVM: TodoListViewModel
+    @State private var title: String = ""
+    @State private var detail: String = ""
+    @State private var date: Date = Date()
     @Binding var isShowingCreateModal: Bool
-    
+    private var disableButtton: Bool {
+        title.isEmpty || detail.isEmpty
+    }
+
     var body: some View {
             Form {
                 Section {
@@ -30,13 +33,14 @@ struct CreateTodoView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        viewModel.add(title: title, detail: detail, due: date)
+                        todoVM.add(title: title, detail: detail, due: date)
                         isShowingCreateModal = false
                     } label: {
                         Text("save")
-                            .foregroundColor(.blue)
+                            .foregroundColor(disableButtton ? .gray : .blue)
                     }
-                }
+                    .disabled(disableButtton)
+                }//: TOOLBARITEM
             }//: TOOLBAR        
     }//: BODY
 }

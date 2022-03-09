@@ -17,9 +17,22 @@ struct TodoListView: View {
             NavigationView {
                 List {
                     ForEach(viewModel.items, id: \.self) { item in
-                        Text(item.title ?? "")
+                        NavigationLink {
+                            TimerView(referenceDate: item.dueDate_)
+                        } label: {
+                            HStack {
+                                ItemCell(isDone: item.isDone)
+                                Text(item.title ?? "")
+                            }
+                            .onTapGesture {
+                                viewModel.update(item: item)
+                            }
+                        }
+
+
                     }
                     .onDelete(perform: viewModel.remove)
+
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -42,6 +55,21 @@ struct TodoListView: View {
         }//: ZSTACK
     }//: BODY
 }
+
+struct ItemCell: View {
+    var isDone: Bool
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(isDone ? .green : .clear)
+                .frame(width: 25, height: 25, alignment: .center)
+            Circle()
+                .stroke(.green, lineWidth: 2)
+                .frame(width: 30, height: 30, alignment: .center)
+        }
+    }
+}
+
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        TodoListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
